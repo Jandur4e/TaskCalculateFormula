@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise JavaScript 2</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            background-color: #8d0801;
+            margin-top: 50px;
+        }
+        .box{
+            margin: auto;
+            width: 600px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4d58d;
+            border-radius: 30px;
+        }
+        .submit
+        {
+            padding: 10px 30px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            background-color: #708d81;
+            color: #f4d58d;
+            font-weight: 900;
+            cursor: pointer;
+        }
+        .submit:active
+        {
+            opacity: 0.5;
+        }
+        #display, #display1, #display2
+        {
+            color: #bf0603;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .images{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <button class="submit" onclick="getValueFromNumberInput()">shake it the dices !!!</button>
+        <div class="images">
+            <p id="display"></p>
+            <p id="display1"></p>
+        </div>
+        <h3 id="display2"></h3>
+    </div>
+    <script>
+            function getValueFromNumberInput(dice, dice1){
+            dice = Math.floor(Math.random()*6 + 1 );
+        switch(dice){
+            case 1:
+            document.getElementById('display').innerHTML =(`<img src='image/Dice1.png' style='width: 140px'>`);
+            break;
+            case 2:
+            document.getElementById('display').innerHTML =(`<img src='image/Dice2.png' style='width: 140px'>`);
+            break;
+            case 3:
+            document.getElementById('display').innerHTML =(`<img src='image/Dice3.png' style='width: 140px'>`);
+            break;
+            case 4:
+            document.getElementById('display').innerHTML =(`<img src='image/Dice4.png' style='width: 140px'>`);
+            break;
+            case 5:
+            document.getElementById('display').innerHTML =(`<img src='image/Dice5.png' style='width: 140px'>`);
+            break;
+            case 6:
+            document.getElementById('display').innerHTML =(`<img src='image/Dice6.png' style='width: 140px'>`);
+            break;
+            default: 
+            document.getElementById('display').innerHTML =(`you don't have that number on dice`);
+        } 
 
+
+            dice1 = Math.floor(Math.random()*6 + 1 );
+        switch(dice1){
+            case 1:
+            document.getElementById('display1').innerHTML =(`<img src='image/Dice1.png' style='width: 140px'>`);
+            break;
+            case 2:
+            document.getElementById('display1').innerHTML =(`<img src='image/Dice2.png' style='width: 140px'>`);
+            break;
+            case 3:
+            document.getElementById('display1').innerHTML =(`<img src='image/Dice3.png' style='width: 140px'>`);
+            break;
+            case 4:
+            document.getElementById('display1').innerHTML =(`<img src='image/Dice4.png' style='width: 140px'>`);
+            break;
+            case 5:
+            document.getElementById('display1').innerHTML =(`<img src='image/Dice5.png' style='width: 140px'>`);
+            break;
+            case 6:
+            document.getElementById('display1').innerHTML =(`<img src='image/Dice6.png' style='width: 140px'>`);
+            break;
+            default: 
+            document.getElementById('display1').innerHTML =(`you don't have that number on dice`);
+        } 
+        
+        
+        if ( dice === 1 && dice1 === 1 ){
+            document.getElementById('display2').innerHTML =('you lose, better luck next time');
+        }
+        else if (dice === 1 && dice1 === 2){
+            document.getElementById('display2').innerHTML =('you lose, better luck next time');
+        }
+        else if (dice === 2 && dice1 === 1){
+            document.getElementById('display2').innerHTML =('you lose, better luck next time');       
+        }
+        else if (dice === 2 && dice1 === 2){
+            document.getElementById('display2').innerHTML =('you lose, better luck next time');        
+        }
+        else if (dice === 4 && dice1 === 4){
+            document.getElementById('display2').innerHTML =('you lose, better luck next time');
+        }
+        else if (dice === 3 && dice1 === 3){
+            document.getElementById('display2').innerHTML =('you win !!!');
+        }
+        else if (dice === 5 && dice1 === 6){
+            document.getElementById('display2').innerHTML =('you win !!!');
+        }
+        else if (dice === 6 && dice1 === 5){
+            document.getElementById('display2').innerHTML =('you win !!!');
+        }
+        else if (dice === 6 && dice1 === 6){
+            document.getElementById('display2').innerHTML =('you win !!!');
+        }
+        else {
+            document.getElementById('display2').innerHTML =('the next to shake the dice');
+        }
+    };
+    </script>
+</body>
+</html>
