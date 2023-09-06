@@ -1,0 +1,50 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.box
+{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.card
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 400px;
+    background: linear-gradient(#d9ed92, #168aad);
+    position: relative;
+    border-radius: 30px;
+    padding: 0 20px;
+}
+button
+{
+    background-color: #b5e48c;
+    border: 2px solid #1e6091;
+    border-radius: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #1a759f;
+    font-weight: 900;
+    cursor: pointer;
+}
+button:hover
+{
+    opacity: 0.8;
+}
+h1
+{
+    font-size: 3rem;
+    color: #d9ed92;
+}
+h3
+{
+    color: #168aad;
+}
